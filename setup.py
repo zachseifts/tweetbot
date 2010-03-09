@@ -1,11 +1,16 @@
 #!/usr/bin/env python
 
+import os
 try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
 
 __version__ = '0.1'
+
+def read(fname):
+    ''' Utility function to read the README.markdown file.'''
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 setup(
     author='Zach Seifts',
@@ -22,7 +27,7 @@ setup(
         'Topic :: Communications :: Chat',
         'Topic :: Internet',
     ],
-    description='A twitter bot library.',
+    description=read('README.markdown'),
     license='BSD',
     keywords='twitter bots',
     name='tweetbot',
