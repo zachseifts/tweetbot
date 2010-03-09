@@ -5,6 +5,17 @@ stages of development. See the todo section below for more information.
 For a working example check out http://twitter.com/booneweather or clone
 the repo http://github.com/zachseifts/booneweather.
 
+## Install
+
+### From pip
+
+   $ pip install tweetbot
+
+### Development version
+
+    $ git clone http://github.com/zachseifts/tweetbot.git
+    $ cd tweetbot && python ./setup.py install
+
 ## Have ideas on how this could be better or want to help out?
 
 Fork the project on github and push back your changes, I'll include them
