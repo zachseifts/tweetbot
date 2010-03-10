@@ -41,9 +41,9 @@ class TwitterBot(object):
         self.api = twitter.Api(username=self.username,
                                password=self.password)
 
-    def post(self, tweet):
-        self.check_tweet_length(tweet)
-        self.api.PostUpdate(tweet)
+    def post(self):
+        self.check_tweet_length(self.tweet)
+        self.api.PostUpdate(self.tweet)
 
     def check_tweet_length(self, tweet):
         ''' Makes sure the tweet is less than 140 characters.
