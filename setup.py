@@ -1,22 +1,14 @@
-#!/usr/bin/env python
+from setuptools import setup, find_packages
+import sys, os
 
-import os
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+version = '0.2'
 
-__version__ = '0.1'
-
-def read(fname):
-    ''' Utility function to read the README.markdown file.'''
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
-
-setup(
-    author='Zach Seifts',
-    author_email='zach.seifts+tweetbot@gmail.com',
-    install_requires = ['setuptools', 'python-twitter'],
-    classifiers=[
+setup(name='tweetbot',
+      version=version,
+      description="A python based twitter bot framework.",
+      long_description="""\
+""",
+      classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
@@ -26,12 +18,16 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Communications :: Chat',
         'Topic :: Internet',
-    ],
-    description=('A python powered twitter library.'),
-    long_description=read('README.markdown'),
-    license='BSD',
-    keywords='twitter bots',
-    name='tweetbot',
-    version=__version__,
-    packages = ['tweetbot'],
-)
+      ],
+      keywords='twitter, bot',
+      author='Zach Seifts',
+      author_email='zach.seifts+tweetbot@gmail.com',
+      license='BSD',
+      packages=find_packages(exclude=['ez_setup', 'examples', 'tests']),
+      include_package_data=True,
+      zip_safe=False,
+      install_requires = ['setuptools', 'python-twitter'],
+      entry_points="""
+      # -*- Entry points: -*-
+      """,
+      )
